@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+
+body {
+    background-color :hsl(185, 41%, 84%);
+    max-width: 1440px
+}
+
+.container {
+    width: 678px;
+    background-color: hsl(0, 0%, 100%);
+    margin: 20% auto;
+    display: grid;
+    grid-template-areas: 'left right';
+    border-radius: 5px;
+}
+
+.left {
+    grid-area: left;
+    background-color: hsl(0, 0%, 100%);
+    margin: 20px;
+    width: 300px;
+}
+
+.bill {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+
+}
+
+
+.bill input {
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    
+}
+
+ .bill input::placeholder {
+    background-image: url('../images/icon-dollar.svg');
+    background-size: contain;
+    background-repeat:no-repeat; 
+    
+    
+}
+
+.bill input[name="number"] {
+    padding: 10px;
+    text-align: right; 
+    width: 100%; 
+    
+}
+
+.tip {
+    display: grid;
+    grid-template-areas: 
+    'btn1 btn2 btn3'
+    'btn4 btn5 custom';
+    row-gap: 10px;
+    width: 300px;
+    margin-top: 5px;
+  
+    
+
+}
+
+
+.tip .btn1 {
+    grid-area: btn1;
+    width:  70px;
+    padding: 5px;
+    background-color:hsl(183, 100%, 15%);
+    color:  hsl(189, 41%, 97%);
+    cursor: pointer;
+}
+.tip .btn2 {
+    grid-area: btn2;
+    width:  70px;
+    background-color:hsl(183, 100%, 15%);
+    color:  hsl(189, 41%, 97%);
+    cursor: pointer;
+}
+.tip .btn3 {
+    grid-area: btn3;
+    width:  70px;
+    background-color: hsl(185, 41%, 84%);
+    cursor: pointer;
+  
+}
+.tip .btn4 {
+    grid-area: btn4;
+    background-color:hsl(183, 100%, 15%);
+    color:  hsl(189, 41%, 97%);
+    width:  70px;
+    padding: 5px;
+    cursor: pointer;
+}
+.tip .btn5 {
+    grid-area: btn5;
+    background-color:hsl(183, 100%, 15%);
+    width:  70px;
+    color:  hsl(189, 41%, 97%);
+    cursor: pointer;
+}
+.tip .custom {
+    grid-area:  custom;
+    width:  70px;
+    cursor: pointer;
+}
+
+.people {
+    margin-top: 20px;
+}
+
+
+.people input {
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    
+}
+
+ .people input::placeholder {
+    background-image: url('../images/icon-person.svg');
+    background-size: contain;
+    background-repeat:no-repeat; 
+    
+    
+}
+
+.people input[name="people"] {
+    padding: 10px;
+    text-align: right; 
+    width: 90%; 
+    
+}
+
+.container .right {
+    grid-area: right;
+    border-radius: 10px;
+    background-color:hsl(183, 100%, 15%);
+    margin: 20px 20px 20px 0;
+    width: 300px;
+    color: white;
+}
+
+.amount {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.amount b {
+    font-size: 14px;
+   
+}
+
+.amount span {
+    font-size: 14px;
+    color: hsl(185, 41%, 84%);
+   
+
+}
+
+.amount strong {
+    position: relative;
+    font-size: 30px;
+    top: 10px;
+    left: 10%;
+}
+
+.total {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.total b {
+    font-size: 14px;
+}
+
+.total span {
+    font-size: 14px;
+    color: hsl(185, 41%, 84%);;
+
+}
+
+.total strong {
+    position: relative;
+    font-size: 30px;
+    top: 10px;
+    left: 18%;
+}
+
+.right button {
+    margin-left: 20px;
+    padding: 5px;
+    margin-top: 15%;
+    width: 85%;
+    padding: 10px;
+    text-transform: uppercase;
+    color: black;
+    background-color: hsl(185, 41%, 84%);
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+
+
+
+/* *********** MEDIA QUERY *********** */
+@media screen and (max-width:375px) {
+
+    .container {
+        width: 300px;
+        margin: 30px auto;
+        display: grid;
+        grid-template-areas: 'left'
+         'right';
+        border-radius: 5px;
+    }
+    
+    .left {
+        width: 260px;
+    }
+    
+    .bill,.container span {
+        font-size: 14px;
+    
+    }
+    
+    
+    .bill input[name="number"] { 
+        width: 110%; 
+        
+    }
+    
+    .tip {
+        display: grid;
+        grid-template-areas:
+        'btn1 btn2' 
+        'btn3 btn4'
+        'btn5 custom';
+        row-gap: 10px;
+        margin-top: 5px;
+      
+        
+    
+    }
+    
+    
+    .tip .btn1 {
+        
+        width:  110px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+      
+    }
+    .tip .btn2 {
+        width:  110px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+    }
+    .tip .btn3 {
+
+        width:  110px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+      
+    }
+    .tip .btn4 {
+        width:  110px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+    }
+    .tip .btn5 {
+        width:  110px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+    }
+    .tip .custom {
+        width:  110px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .people {
+        margin-top: 20px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+    
+    
+  
+    
+    .people input[name="people"] {
+        padding: 10px;
+        text-align: right; 
+        width: 100%; 
+        
+    }
+    
+    .container .right {
+        margin: 0 auto;
+        width: 250px;
+        position: relative;
+        bottom: 10%;
+        
+
+    }
+    
+    .amount {
+        padding: 0;
+    }
+    
+    .amount b {
+        font-size: 14px;
+       
+    }
+    
+    .amount span {
+        font-size: 12px;
+       
+    
+    }
+    
+    .amount strong {
+    
+        left: 6%;
+    }
+    
+    .total {
+        padding: 0px;
+    }
+    
+    .total b {
+        font-size: 14px;
+    }
+    
+    .total span {
+        font-size: 12px;
+      
+    
+    }
+    
+    .total strong {
+        left: 15%;
+    }
+    
+    .right button {
+        margin-top: 10%;
+        margin-bottom: 20px;
+        width: 85%;
+    
+    }
+}
+

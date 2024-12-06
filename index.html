@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="script/script.js"></script>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <div class="bill">
+        <span>Bill</span>
+        <span icon-dollar></span>
+        <input name="number" id="number" placeholder="0">
+      </div>
+
+      <span>Select Tip %</span>
+      <div class="tip">
+        
+        <button id="btn1" class="btn1"> 5%</button>
+        <button id="btn2"class="btn2">10%</button>
+        <button id="btn3"class="btn3">15%</button>
+        <button id="btn4"class="btn4">25%</button>
+        <button id="btn5"class="btn5">50%</button>
+        <button id="btnCustom"class="custom">Custom</button>
+      </div>
+
+      <div class="people">
+        <span>Number of People</span>
+        <input name="people" id="people" placeholder="0">
+      </div>
+
+    </div>
+
+    <div class="right">
+      <div class="amount">
+        <b>Tip Amount</b>
+        <strong></strong>
+        <br>
+        <span>/ person</span>
+        
+      </div>
+
+      <div class="total">
+        <b>Total</b>
+        <strong></strong>
+        <br>
+        <span>/ person</span>
+        
+      </div>
+
+      <button id="reset" type="submit"> Reset</button>
+    </div>
+
+  </div>
+ 
+</body>
+</html>
